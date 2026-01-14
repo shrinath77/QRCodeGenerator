@@ -87,54 +87,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 2. Use any HTTP client to call the `/qr/generate` endpoint with the text you want to encode
 3. The API will return a PNG image of the generated QR code
 
-### Example Usage with cURL
-
-```bash
-# Generate QR code and save to file
-curl -X GET "http://localhost:8080/qr/generate?text=Hello%20World" --output qrcode.png
-
-# Or open directly in browser:
-# http://localhost:8080/qr/generate?text=Hello%20World
-```
-
-### Example Usage with JavaScript/Fetch
-
-```javascript
-// In a web application
-async function generateQR(text) {
-    const response = await fetch(`http://localhost:8080/qr/generate?text=${encodeURIComponent(text)}`);
-    const blob = await response.blob();
-    const imageUrl = URL.createObjectURL(blob);
-    
-    // Display the QR code
-    const img = document.createElement('img');
-    img.src = imageUrl;
-    document.body.appendChild(img);
-}
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-### Development Setup
-
-1. Clone the repository
-2. Import as Maven project in your favorite IDE
-3. Run `mvn clean install` to install dependencies
-4. Run the `QrCodeGeneratorApplication` class to start the application
-
-### Testing
-
-Run the test suite with:
-```bash
-mvn test
-```
 
 ## Acknowledgments
 
