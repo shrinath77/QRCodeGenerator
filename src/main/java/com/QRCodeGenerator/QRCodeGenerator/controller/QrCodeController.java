@@ -15,7 +15,7 @@ public class QrCodeController {
 
     private final QrCodeService qrCodeService;
 
-    public QrCodeController(QrCodeSegit rvice qrCodeService) {
+    public QrCodeController(QrCodeService qrCodeService) {
 
         this.qrCodeService = qrCodeService;
     }
