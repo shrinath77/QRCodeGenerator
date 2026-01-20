@@ -28,12 +28,5 @@ public class QrCodeController {
         return ResponseEntity.ok(qrImage);
     }
 
-    @GetMapping("/test")
-    public ResponseEntity<Map<String, String>> test() {
-
-        log.warn("Test Api called");
-
-        return ResponseEntity.ok(Map.of("status", "ok"));
-    }
 
 }
